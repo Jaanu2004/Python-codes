@@ -1,0 +1,8 @@
+sname=input("Enter Student name:")
+sno=int(input("Enter student roll no:"))
+group=input("Enter student group:")
+s1=int(input("Enter subject-1 marks:"))
+s2=int(input("Enter subject-2 marks:"))
+s3=int(input("Enter subject-3 marks:"))
+print("Total marks:",s1+s2+s3)
+print("Average of student marks:",(s1+s2+s3)/3)
