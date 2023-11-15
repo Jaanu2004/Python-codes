@@ -1,0 +1,11 @@
+mylist=[7, 12, 90, 11, 55, 84, 5, 58, 377, 121, 69, 39, 29]
+min=mylist[0]
+max=mylist[0]
+for i in range(len(mylist)):
+   if min>mylist[i]:
+     min=mylist[i]
+   if max<mylist[i]:
+     max=mylist[i]   
+ 
+diff=max-min  
+print('Difference between Minimum and maximum: '+str(diff))
