@@ -1,0 +1,12 @@
+n=int(input())
+l=list(map(int,input().split()))
+fmin=l[0]
+for i in range(0,n):
+    if l[i]<fmin:
+        fmin=l[i]
+l.remove(fmin)
+smin=l[0]
+for i in l:#calling element directly from the list
+    if i<smin:
+        smin=i
+print(smin)
