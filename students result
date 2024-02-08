@@ -1,0 +1,31 @@
+s={}#empty dictionary
+#create dictionary for number of students
+n=int(input('enter no of students:'))
+for i in range(n):
+    l=[]
+    htno=int(input('enter htno:'))
+    sname=input('enter name:')
+    s1=int(input('enter maths:'))
+    s2=int(input('enter physics:'))
+    s3=int(input('enter cs:'))
+    s4=int(input('enter os:'))
+    s5=int(input('enter java:'))
+    l.append(sname)#0
+    l.append(s1)#1
+    l.append(s2)#2
+    l.append(s3)
+    l.append(s4)
+    l.append(s5)#3
+    s[htno]=l#
+
+#accessing dictinary with specified key
+hno=int(input("Enter htno:"))
+print("name of the student:",s[hno][0])
+total=s[hno][1]+s[hno][2]+s[hno][3]
+avg=total//5
+print('Total:',total)
+print('Percentage:',avg)
+if avg>60:
+    print('Pass')
+else:
+    print('Fail')
