@@ -1,0 +1,41 @@
+##Generating employee salary pay slip
+class employee:
+    
+    def getdata(self,empno,empname,des,basic,hra,da,ta):
+        self.empno=empno
+        self.empname=empname
+        self.des=des
+        self.basic=basic
+        self.hra=hra
+        self.da=da
+        self.ta=ta
+    def putdata(self):
+        print('employee no:',self.empno)
+        print('employee name:',self.empname)
+        print('employee designation:',self.des)
+        print('employee baisc salary:',self.basic)
+        print('employee hra:',self.hra)
+        print('employee da:',self.da)
+        print('employee ta:',self.ta)
+        total=self.basic+self.hra+self.ta+self.da
+        print('total:',total)
+        if total>=50000:
+            tax=total*(5/100)
+        elif total>=35000:
+            tax=total*(3/100)
+        elif total>=20000:
+            tax=total*(1/100)
+        else:
+            tax=0
+        print('Total salary included with tax:',total+tax)
+
+s=employee()
+empno=int(input('Enter Employee no-->'))
+empname=input('Enter Employee name-->')
+des=input('Enter Designation-->')
+basic=int(input('enter basic salarys-->'))
+hra=int(input('enter hra-->'))
+ta=int(input('enter cs ta-->'))
+da=int(input('enter da-->'))
+s.getdata(empno,empname,des,basic,hra,da,ta)
+s.putdata()
